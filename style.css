@@ -1,0 +1,108 @@
+/* --- PERBAIKAN LAYOUT (Agar tidak boleh ditarik horizontal) --- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- KOD ASAL KAMU (Sama persis tanpa ubahan) --- */
+body {
+    background-color: #f8f9fa;
+}
+
+header {
+    padding-bottom: 80px !important; 
+}
+
+.bg-dark {
+    background: linear-gradient(135deg, #0399b5 0%, #014f5d 100%) !important;
+}
+
+#Foto-profile {
+    display: flex;
+    justify-content: center;
+    margin-top: -75px;
+    position: relative;
+    z-index: 10;
+}
+
+.foto-profile-container {
+    background: white;
+    padding: 6px; 
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-foto-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 14px;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.text-secondary {
+    color: #fefeff !important; 
+}
+
+#profile h2 {
+    display: inline-block;
+    border-bottom: 4px solid #0d6efd;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .card-foto-profile img {
+        width: 120px;
+        height: 120px;
+    }
+    #Foto-profile {
+        margin-top: -60px;
+    }
+}
+
+/* --- TAMBAHAN FOOTER HITAM SESUAI PERMINTAAN --- */
+.footer-custom {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-custom a {
+    color: #0399b5;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-contact {
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.footer-copy {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 1px;
+}
