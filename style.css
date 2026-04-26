@@ -1,0 +1,225 @@
+/* --- NAVBAR PORTFOLIO SETUP --- */
+:root {
+    --accent-color: #0399b5;
+    --text-dark: #333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar-portfolio {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.nav-logo span { color: var(--accent-color); }
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover { color: var(--accent-color); }
+
+.nav-btn {
+    background: var(--accent-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text-dark);
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+
+    .nav-menu.active { left: 0; }
+    .nav-btn { display: none; }
+    .mobile-only { display: block; }
+    .nav-btn-mobile {
+        background: var(--accent-color);
+        color: white !important;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    /* Animasi X */
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+
+
+/* --- PERBAIKAN LAYOUT (Agar tidak boleh ditarik horizontal) --- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- KOD ASAL KAMU (Sama persis tanpa ubahan) --- */
+body {
+    background-color: #f8f9fa;
+}
+
+header {
+    padding-bottom: 80px !important; 
+}
+
+.bg-dark {
+    background: linear-gradient(135deg, #0399b5 0%, #014f5d 100%) !important;
+}
+
+#Foto-profile {
+    display: flex;
+    justify-content: center;
+    margin-top: -75px;
+    position: relative;
+    z-index: 10;
+}
+
+.foto-profile-container {
+    background: white;
+    padding: 6px; 
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-foto-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 14px;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.text-secondary {
+    color: #fefeff !important; 
+}
+
+#profile h2 {
+    display: inline-block;
+    border-bottom: 4px solid #0d6efd;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .card-foto-profile img {
+        width: 120px;
+        height: 120px;
+    }
+    #Foto-profile {
+        margin-top: -60px;
+    }
+}
+
+/* --- TAMBAHAN FOOTER HITAM SESUAI PERMINTAAN --- */
+.footer-custom {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-custom a {
+    color: #0399b5;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-contact {
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.footer-copy {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 1px;
+}
